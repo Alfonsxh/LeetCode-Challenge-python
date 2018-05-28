@@ -60,7 +60,7 @@ class Solution:
                     return [i, j]
         return None
 
-    # Runtime: 40 ms
+    # Runtime: 1100 ms
     def twoSum_4(self, nums, target):
         """
         :type nums: List[int]
