@@ -16,14 +16,12 @@ def QuitSorting(srcList: list):
     if len(srcList) < 2:
         return srcList
 
-    low = 0
-    high = len(srcList)
-    mid = (low + high) // 2
+    mid = (0 + len(srcList)) // 2
     midValue = srcList[mid]
 
     lowList = list()
     highList = list()
-    midList = []
+    midList = []                # 对于重复的mid都放在一起
     for i in srcList:
         if i < midValue:
             lowList.append(i)
