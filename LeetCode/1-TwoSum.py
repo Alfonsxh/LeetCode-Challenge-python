@@ -60,22 +60,18 @@ class Solution:
                     return [i, j]
         return None
 
-    # Runtime: 1100 ms
+    # Runtime: 1080 ms
     def twoSum_4(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
         """
-        if target % 2 == 0 and nums.count(target / 2) == 2:
-            tmpNums = list(nums)
-            tmpNums[nums.index(target / 2)] = target / 2 + 1
-            return [nums.index(target / 2), tmpNums.index(target / 2)]
         for i in range(len(nums)):
             leftNum = nums[i]
             rightNum = target - leftNum
             if rightNum in nums and i != nums.index(rightNum):
-                return [i, nums.index(rightNum)]
+                return sorted([i, nums.index(rightNum)])
         return None
 
 
