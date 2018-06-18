@@ -3,7 +3,7 @@
 """
 @author: Alfons
 @contact: alfons_xh@163.com
-@file: 53-MaximumSubarray.py
+@file: 53.MaximumSubarray.py
 @time: 18-6-4 上午12:16
 @version: v1.0 
 """

@@ -3,7 +3,7 @@
 """
 @author: Alfons
 @contact: alfons_xh@163.com
-@file: QuitSort.py
+@file: 1.QuitSort.py
 @time: 18-6-3 下午3:05
 @version: v1.0 
 """

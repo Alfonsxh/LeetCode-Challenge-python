@@ -3,7 +3,7 @@
 """
  @Author  : Alfons
  @Contact: alfons_xh@163.com
- @File    : 1-TwoSum.py
+ @File    : 1.TwoSum.py
  @Time    : 2018/5/28 10:55
 """
 
