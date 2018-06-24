@@ -7,11 +7,10 @@
 @time: 18-6-3 下午3:15
 @version: v1.0 
 """
+# 选择排序
 
 from Algorithms.LogDecorator import PrintfDecorator
 
-
-# 选择排序
 
 def FindMinNumber(srcList: list) -> (int, int):
     minIndex = 0
