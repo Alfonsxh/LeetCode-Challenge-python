@@ -7,16 +7,6 @@
 @time: 18-6-24 下午6:02
 @version: v1.0 
 """
-#!/usr/bin/env python
-# encoding: utf-8
-"""
-@author: Alfons
-@contact: alfons_xh@163.com
-@file: 51.N-Queens.py
-@time: 18-6-24 下午5:23
-@version: v1.0 
-"""
-
 
 # 52. N-Queens II (https://leetcode.com/problems/n-queens-ii/description/)
 
