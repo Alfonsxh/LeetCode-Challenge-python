@@ -7,6 +7,11 @@
 @time: 18-6-18 下午4:55
 @version: v1.0 
 """
+# 最短路径----贝尔曼弗洛德算法
+# for i in |V-1|:
+#   if d(A->U) + d(U->V) < d(A->V):
+#       d(A->V) = d(A->U) + d(U->V)
+
 from collections import namedtuple
 
 # 图

@@ -7,11 +7,10 @@
 @time: 18-6-3 下午2:36
 @version: v1.0 
 """
+# 二分法查找
 
 from Algorithms.LogDecorator import PrintfDecorator
 
-
-# 二分法查找
 
 # 非递归方式
 @PrintfDecorator

@@ -7,10 +7,11 @@
 @time: 18-6-3 下午3:05
 @version: v1.0 
 """
+# 快速排序
+
 from Algorithms.LogDecorator import PrintfDecorator
 
 
-# 快速排序
 @PrintfDecorator
 def QuitSorting(srcList: list):
     if len(srcList) < 2:
