@@ -30,4 +30,8 @@ class Solution:
 
 
 sol = Solution()
-print(sol.change(5, [1, 2, 5]))
+print(sol.change(11, [1, 3, 5]))
+for i in range(5, 11):
+    print(sol.change(i, [5, 2, 1]))
+    print(sol.change(i, [1, 2, 5]))
+    print('\n\n')
