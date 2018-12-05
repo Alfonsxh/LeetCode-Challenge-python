@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class Solution {
+class NotRepeatElement {
 public:
     // 26. Remove Duplicates from Sorted Array
     int removeDuplicates(vector<int> &nums) {
