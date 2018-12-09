@@ -32,7 +32,7 @@ int main() {
     std::cout << "There have " << notRepeatElement.removeDuplicates2(nums4) << " diff elements." << std::endl;
 
     // -----------------------归并排序---------------------------------
-    MergeSortLists MegreSort;
+    MergeSortLists MergeSorter;
 
     // 21. Merge Two Sorted Lists
     int l1[] = {1, 2, 4, 5, 6, 8};
@@ -40,13 +40,24 @@ int main() {
     ListNode *node_list_1 = CreateNodeList(l1, sizeof(l1) / sizeof(l1[0]));
     ListNode *node_list_2 = CreateNodeList(l2, sizeof(l2) / sizeof(l2[0]));
 
-    PrintNodeList(MegreSort.mergeTwoLists(node_list_1, node_list_2));
+    PrintNodeList(MergeSorter.mergeTwoLists(node_list_1, node_list_2));
 
     // 88. Merge Sorted Array
     vector<int> vec_l1 = {1, 2, 3, 0, 0, 0};
     vector<int> vec_l2 = {2, 5, 6};
 
-    MegreSort.merge(vec_l1, 3, vec_l2, 3);
+    MergeSorter.merge(vec_l1, 3, vec_l2, 3);
     PrintIterator(vec_l1);
+
+    // 23. Merge k Sorted Lists
+    int merge_list_1[] = {4, 5, 6};
+    int merge_list_2[] = {1, 2, 3};
+    int merge_list_3[] = {7, 8};
+    ListNode *merge_node_1 = CreateNodeList(merge_list_1, sizeof(merge_list_1) / sizeof(merge_list_1[0]));
+    ListNode *merge_node_2 = CreateNodeList(merge_list_2, sizeof(merge_list_2) / sizeof(merge_list_2[0]));
+    ListNode *merge_node_3 = CreateNodeList(merge_list_3, sizeof(merge_list_3) / sizeof(merge_list_3[0]));
+    std::vector<ListNode *> merge_vec{merge_node_1, merge_node_2, merge_node_3};
+
+    MergeSorter.mergeKLists(merge_vec);
     return 1;
 }

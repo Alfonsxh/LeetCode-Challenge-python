@@ -13,6 +13,8 @@ void PrintIterator(T &iterObj) {
         std::cout << i << " ";
         std::flush(std::cout);
     }
+    std::cout<< std::endl;
+    std::flush(std::cout);
 }
 
 #endif //LEETCODE_BASEFUNC_H
