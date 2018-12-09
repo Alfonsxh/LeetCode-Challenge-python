@@ -5,6 +5,9 @@
 #ifndef LEETCODE_SORTLISTS_H
 #define LEETCODE_SORTLISTS_H
 
+#include <algorithm>
+#include <vector>
+
 using namespace std;
 
 struct ListNode {
@@ -14,6 +17,12 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
 };
 
+/**
+ * 根据输入的int数组创建对应的节点列表
+ * @param input 输入数组指针
+ * @param len 数组长度
+ * @return 节点列表
+ */
 ListNode *CreateNodeList(int *input, int len) {
     ListNode *output = new ListNode(0);
     ListNode *head = output;
@@ -26,6 +35,10 @@ ListNode *CreateNodeList(int *input, int len) {
     return head->next;
 }
 
+/**
+ * 打印节点列表
+ * @param nodeList 节点列表
+ */
 void PrintNodeList(ListNode *nodeList) {
     while (nodeList != nullptr) {
         cout << nodeList->val;
@@ -93,6 +106,45 @@ public:
         }
 
         nums1.swap(tmp);
+    }
+
+    // 23. Merge k Sorted Lists
+    static bool Comper(ListNode *node1, ListNode *node2) {
+        return node1->val > node2->val;
+    }
+
+    ListNode *mergeKLists(vector<ListNode *> &lists) {
+        // 初始化堆
+        std::vector<ListNode *> node_heap;
+        node_heap.reserve(lists.size());
+        for (auto node: lists) {
+            if (node) node_heap.push_back(node);
+        }
+
+        if (node_heap.empty())
+            return nullptr;
+
+        std::make_heap(node_heap.begin(), node_heap.end(), Comper);
+
+        // 循环读取最小值，并补充元素
+        ListNode *result = new ListNode(0);
+        ListNode *head = result;
+        while (!node_heap.empty()) {
+            // 获取最小值，并从堆中剔除它
+            std::pop_heap(node_heap.begin(), node_heap.end(), Comper);
+            ListNode *min_node = node_heap.back();
+            node_heap.pop_back();
+
+            // 存储最小值
+            result->next = min_node;
+            result = result->next;
+
+            // 将最小元素的下一个元素入堆
+            if (min_node->next) node_heap.push_back(min_node->next);
+            std::push_heap(node_heap.begin(), node_heap.end(), Comper);
+        }
+
+        return head->next;
     }
 
 };
