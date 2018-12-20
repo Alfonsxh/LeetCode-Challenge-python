@@ -37,11 +37,31 @@ class Solution(object):
 
         return min(a, b)
 
+    def dp2_minCostClimbingStairs(self, cost):
+        """
+        :type cost: List[int]
+        :rtype: int
+        """
+        if len(cost) < 2:
+            return 0
+
+        a = cost[0]
+        b = cost[1]
+
+        for i in range(2, len(cost)):
+            tmp = min(b + cost[i - 1], a + cost[i - 2])
+            a = b
+            b = tmp
+
+        return b
+
 
 if __name__ == '__main__':
     sol = Solution()
     print(sol.rec_minCostClimbingStairs([0, 0, 0, 1]))
     print(sol.dp_minCostClimbingStairs([0, 0, 0, 1]))
+    print(sol.dp2_minCostClimbingStairs([0, 0, 0, 1]))
 
     print(sol.rec_minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]))
     print(sol.dp_minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]))
+    print(sol.dp2_minCostClimbingStairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]))
