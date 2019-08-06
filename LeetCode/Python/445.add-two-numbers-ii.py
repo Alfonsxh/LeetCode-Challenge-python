@@ -11,37 +11,17 @@
 
 
 # Definition for singly-linked list.
-class ListNode:
-    def __init__(self, x):
-        self.val = x
-        self.next = None
-
-
-def MakeListNodes(l: list):
-    header = ListNode(l[0])
-    header_tmp = header
-    for val in l[1:]:
-        second = ListNode(val)
-        header_tmp.next = second
-        header_tmp = second
-
-    return header
-
-
-def PrintListNode(l: ListNode):
-    l_tmp = list()
-
-    while l is not None:
-        l_tmp.append(str(l.val))
-        l = l.next
-
-    print(" -> ".join(l_tmp))
+from LeetCode.Python.BaseListNode import MakeListNodes, PrintListNode, ListNode
 
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         """
-        :type l1: ListNode
+        :type l1: ListNodeclass ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
         :type l2: ListNode
         :rtype: ListNode
         """
