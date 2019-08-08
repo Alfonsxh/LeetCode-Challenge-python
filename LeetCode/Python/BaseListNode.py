@@ -12,6 +12,9 @@ class ListNode:
         self.val = x
         self.next = None
 
+    def __repr__(self):
+        return str(self.val)
+
 
 def MakeListNodes(l: list):
     header = ListNode(l[0])
@@ -32,3 +35,7 @@ def PrintListNode(l: ListNode):
         l = l.next
 
     print(" -> ".join(l_tmp))
+
+
+if __name__ == '__main__':
+    PrintListNode(MakeListNodes([1, 2, 3, 4, 5, 6]))
