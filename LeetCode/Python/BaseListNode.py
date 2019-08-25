@@ -28,6 +28,9 @@ def MakeListNodes(l: list):
 
 
 def PrintListNode(l: ListNode):
+    if l is None:
+        print("None")
+
     l_tmp = list()
 
     while l is not None:
